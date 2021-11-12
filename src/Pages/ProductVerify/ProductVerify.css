@@ -1,0 +1,10 @@
+.verify-product form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.verify-product form input ,textarea{
+  width: 50%;
+  margin-bottom: 20px;
+}
