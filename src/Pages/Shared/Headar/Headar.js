@@ -15,18 +15,18 @@ const Headar = () => {
           </Link>
           <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center font-bold">
             <Link to="/home" className="mr-5 hover:text-yellow-400">Home</Link>
-            <Link className="mr-5 hover:text-gray-900">Explore</Link>
-            <Link className="mr-5 hover:text-gray-900">About</Link>
-            <Link to="/myOrder" className="mr-5 hover:text-gray-900">My Order</Link>
+            <Link to="/explore" className="mr-5 hover:text-yellow-400">Explore</Link>
+            <Link className="mr-5 hover:text-yellow-400">About</Link>
+            <Link to="/dashBoard" className="mr-5 hover:text-yellow-400">DashBoard</Link>
           </nav>
           {user?.email ?
-            <button className="text-black font-bold bg-green-100 border-0 py-2 px-8 focus:outline-none hover:bg-yellow-100 rounded text-lg" onClick={logout} >Logout</button> :
-            <button className="text-black font-bold bg-green-100 border-0 py-2 px-8 focus:outline-none hover:bg-yellow-100 rounded text-lg"><Link to="/login">Login</Link>
+            <button className="text-white font-bold bg-gray-600 border-0 py-2 px-8 focus:outline-none rounded text-lg" onClick={logout} >Logout</button> :
+            <button className="text-white font-bold bg-gray-600 border-0 py-2 px-8 focus:outline-none rounded text-lg"><Link to="/login">Login</Link>
             </button>
           }
-          <p className="font-bold text-red-100">
-            Signed as: <a href="/login">{user?.displayName}</a>
-          </p>
+          <span className="font-bold text-black">
+            Signed as: <a href="/login">{user?.email}</a>
+          </span>
         </div>
       </container>
     </div>

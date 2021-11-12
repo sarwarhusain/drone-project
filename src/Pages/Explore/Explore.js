@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Prodacts from '../Home/Prodacts/Prodacts';
+import Headar from '../Shared/Headar/Headar';
 
 const Explore = () => {
   const [prodacts, setProdacts] = useState([])
@@ -9,16 +10,19 @@ const Explore = () => {
       .then(data => setProdacts(data));
   }, [])
   return (
-    <div>
-      <div className="delivery-container">
+    <>
+      <Headar></Headar>
+      <div class="container mx-auto px-4">
+
         {
           prodacts.map(prodact => <Prodacts
-            key={prodact._id}
+            key={prodact.id}
             prodact={prodact}
           ></Prodacts>)
         }
+
       </div>
-    </div>
+    </>
   );
 };
 

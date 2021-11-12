@@ -14,7 +14,7 @@ const Prodact = ({ prodact }) => {
               <p className="mb-8 leading-relaxed">{description}</p>
 
               <div className="flex justify-center">
-                <Link to={`/product/${_id}`}><button className="text-indigo-500 inline-flex items-center lg:font-bold md:mb-2 lg:mb-0 bg-green-400 p-2 rounded-3xl">Buy Now
+                <Link to={`/product/${_id}`}><button className="text-white inline-flex items-center font-bold md:mb-2 lg:mb-0 bg-red-700 hover:bg-purple-500 p-2 rounded-3xl">Buy Now
                   <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round" strokeLinejoin="round">
                     <path d="M5 12h14"></path>
                     <path d="M12 5l7 7-7 7"></path>

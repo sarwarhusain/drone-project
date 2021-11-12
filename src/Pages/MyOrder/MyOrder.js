@@ -27,10 +27,10 @@ const MyOrder = () => {
 
   return (
     <div>
-      <h1>Order Details</h1>
+      <h1 className="text-2xl">Order Details</h1>
 
       <div className="">
-        <div className="row container">
+        <div className="container mx-auto px-4">
           {orders.map((product) => (
             <div className="col-md-4">
               <div className="service border p-3">
@@ -38,14 +38,14 @@ const MyOrder = () => {
                   <img className="w-100" src={product.image} alt="" />
                 </div>
 
-                <h6>{product.name}</h6>
+                <h6> <span>Name:</span>{product.name}</h6>
                 <h4>{product.model}</h4>
                 <p>{product.description}</p>
-                <h3 className="text-danger"> price :{product.price}$</h3>
+                <h3 className="text-yellow "> price :{product.price}$</h3>
 
                 <button
                   onClick={() => handleDelete(product._id)}
-                  className="bg-red-500"
+                  className="bg-red-500 px-3 py-2 rounded"
                 >
                   Delate
                 </button>
@@ -54,7 +54,9 @@ const MyOrder = () => {
           ))}
         </div>
       </div>
+      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
     </div>
+
   );
 };
 
