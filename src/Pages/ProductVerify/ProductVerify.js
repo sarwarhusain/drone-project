@@ -43,9 +43,9 @@ const ProductVerify = () => {
           <div>
             <img className="w-50" src={product.img} alt="" />
           </div>
-          <h1 className="text-danger font-bold">Name:{product.name}</h1>
-          <h1 className="text-danger font-bold">Price:{product.price}$</h1>
-          <h1 className="text-danger font-bold">Description:{product.description}$</h1>
+          <h1 className="text-black font-bold">Name:{product.name}</h1>
+          <h1 className="text-red-400 font-bold">Price:{product.price}$</h1>
+          <h1 className="text-black font-semi-bold">Description:{product.description}$</h1>
         </div>
         <div className=" verify-product bg-purple-500 ">
           <h2 className="text-white text-2xl font-bold">Order Information</h2>
