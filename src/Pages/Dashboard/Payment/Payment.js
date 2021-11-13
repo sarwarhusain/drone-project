@@ -5,7 +5,7 @@ const Payment = () => {
   return (
     <div>
       <Headar></Headar>
-      <h1 className="font-bold text-5xl text-center text-red-400 my-40">We are Sorry Our Website gonna Update,So we dont Provide You for payment</h1>
+      <h1 className="font-bold text-5xl text-center text-red-400 my-40">Payment Method invisible</h1>
     </div>
   );
 };
