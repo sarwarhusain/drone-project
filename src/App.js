@@ -14,6 +14,9 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import ManageOrder from './Pages/ManageOrder/ManageOrder';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import MyOrder from './Pages/MyOrder/MyOrder';
+import Payment from './Pages/Dashboard/Payment/Payment';
+import ContuctUs from './Pages/ContuctUs/ContuctUs';
+import About from './Pages/About/About';
 function App() {
   return (
     <div className="App">
@@ -23,32 +26,35 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
+            <Route path="/dashBoard">
+              <Dashboard></Dashboard>
+            </Route>
             <Route exact path="/home">
               <Home></Home>
             </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
-            <PrivateRoute path="/myOrder">
-              <MyOrder></MyOrder>
-            </PrivateRoute>
             <Route path="/register">
               <Register></Register>
             </Route>
-            <PrivateRoute path="/addProduct">
-              <AddProduct></AddProduct>
+            <PrivateRoute exact path="/myOrder">
+              <MyOrder></MyOrder>
             </PrivateRoute>
             <Route path="/explore">
               <Explore></Explore>
             </Route>
-            <PrivateRoute exact path="/manageOrder">
-              <ManageOrder></ManageOrder>
-            </PrivateRoute>
             <PrivateRoute exact path="/product/:verifyId">
               <ProductVerify></ProductVerify>
             </PrivateRoute>
-            <Route path="/dashBoard">
-              <Dashboard></Dashboard>
+            <Route path="/payment">
+              <Payment></Payment>
+            </Route>
+            <Route path="/contactUs">
+              <ContuctUs></ContuctUs>
+            </Route>
+            <Route path="/about">
+              <About></About>
             </Route>
             <Route path="*">
               <Notfounde></Notfounde>

@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Headar from '../Shared/Headar/Headar';
-
 const ManageOrder = () => {
   const [orders, setOrders] = useState([]);
 
@@ -27,28 +25,27 @@ const ManageOrder = () => {
   };
   return (
     <div>
-      <Headar></Headar>
       <div className="container mx-auto px-4">
-        <h1 className="text-2xl">All orders {orders.length}</h1>
-        <table class="table-auto">
-          <thead>
+        <h1 className="text-2xl border-2 font-bold bg-purple-50">All orders {orders.length}</h1>
+        <table class="table-auto border-2 bg-purple-50">
+          <thead className="border-2">
             <tr>
-              <th>#</th>
-              <th>Service Title</th>
-              <th>Event description</th>
-              <th>Image Link</th>
-              <th>Status</th>
-              <th>Action</th>
+              <th className="border-2">#</th>
+              <th className="border-2">Service Title</th>
+              <th className="border-2">Event description</th>
+              <th className="border-2">Image Link</th>
+              <th className="border-2">Status</th>
+              <th className="border-2">Action</th>
             </tr>
           </thead>
           {orders?.map((product, index) => (
             <tbody>
               <tr>
-                <td>{index}</td>
-                <td>{product.name}</td>
-                <td>{product.description}</td>
-                <td>{product.image}</td>
-                <td>
+                <td className="border-2">{index}</td>
+                <td className="border-2">{product.name}</td>
+                <td className="border-2">{product.description}</td>
+                <td className="border-2">{product.image}</td>
+                <td className="border-2">
                   <input
                     onChange={handleStatus}
                     type="text"

@@ -8,6 +8,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Yuji Syuku', serif;
 }
 
 code {

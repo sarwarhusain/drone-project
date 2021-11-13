@@ -16,7 +16,7 @@ const useFirebase = () => {
 
   const auth = getAuth();
 
-  const registerUser = (email, password, name, histore) => {
+  const registerUser = (email, password, name, histroy) => {
     setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -34,7 +34,7 @@ const useFirebase = () => {
         }).catch((error) => {
 
         });
-        histore.replace('/')
+        histroy.replace('/')
 
       })
       .catch((error) => {
@@ -80,7 +80,7 @@ const useFirebase = () => {
   }, [])
 
   useEffect(() => {
-    fetch(`https://thawing-retreat-53148.herokuapp.com/users/${user.email}`)
+    fetch(`http://localhost:5000/users/${user.email}`)
       .then(res => res.json())
       .then(data => setAdmin(data.admin))
   }, [user.email])
@@ -89,7 +89,7 @@ const useFirebase = () => {
   const logout = () => {
     setIsLoading(true)
     signOut(auth).then(() => {
-      
+
     }).catch((error) => {
       // error happened.
     })
@@ -98,7 +98,7 @@ const useFirebase = () => {
 
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch('https://thawing-retreat-53148.herokuapp.com/users', {
+    fetch('http://localhost:5000/users', {
       method: method,
       headers: {
         'content-type': 'application/json'

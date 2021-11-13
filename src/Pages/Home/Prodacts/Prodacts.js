@@ -12,8 +12,8 @@ const Prodacts = () => {
   return (
     <>
       <div className="text-center mb-20">
-        <h1 className="lg:text-5xl sm:text-3xl text-5xl font-bold title-font mt-5 ">Products</h1>
 
+        <h1 className="lg:text-5xl sm:text-3xl text-5xl font-bold title-font mt-5 ">Products</h1>
         <div className="flex mt-6 justify-center">
           <div className="w-16 h-1 rounded-full bg-yellow-500 inline-flex"></div>
         </div>

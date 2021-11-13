@@ -4,7 +4,7 @@ import Banner from '../Banner/Banner';
 import Gallery from '../Gallery/Gallery';
 import Prodacts from '../Prodacts/Prodacts';
 import Support from '../Support/Support';
-import Testimonial from '../Testimonial/Testimonial';
+import Testimonials from '../Testimonials/Testimonials';
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
       <Headar></Headar>
       <Banner></Banner>
       <Prodacts></Prodacts>
-      <Testimonial></Testimonial>
+      <Testimonials></Testimonials>
       <Support></Support>
       <Gallery></Gallery>
     </div>
