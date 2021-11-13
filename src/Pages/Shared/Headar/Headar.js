@@ -9,10 +9,10 @@ const Headar = () => {
     <div className="container mx-auto px-4">
       <section className="text-gray-600 body-font">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <Link className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <span className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <Link to="/home"><img className="w-50" src="https://i.ibb.co/h9mYS30/sx556uzh10pvawnrxeo9-1.png" alt="" /></Link>
 
-          </Link>
+          </span>
           <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center font-bold">
             <Link to="/home" className="mr-5 hover:text-yellow-400">Home</Link>
             <Link to="/explore" className="mr-5 hover:text-yellow-400">Explore</Link>
@@ -25,7 +25,7 @@ const Headar = () => {
             </button>
           }
           <span className="font-bold text-black">
-            Signed as: <a href="/login">{user?.email}</a>
+            Signed as: <p href="/login">{user?.email}</p>
           </span>
         </div>
       </section>

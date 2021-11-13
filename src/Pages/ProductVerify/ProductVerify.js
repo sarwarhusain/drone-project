@@ -13,7 +13,7 @@ const ProductVerify = () => {
   // const email = useAuth();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${verifyId}`)
+    fetch(`https://pure-springs-49512.herokuapp.com/products/${verifyId}`)
       .then(res => res.json())
       .then(data => setProduct(data))
   }, []);
@@ -24,7 +24,7 @@ const ProductVerify = () => {
 
     data.email = email;
 
-    fetch("http://localhost:5000/confirmOrder", {
+    fetch("https://pure-springs-49512.herokuapp.com/confirmOrder", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -38,9 +38,9 @@ const ProductVerify = () => {
     // from for update
     <>
       <Headar></Headar>
-      <div className="bg-purple-400 verify-product container px-24 py-24 mx-auto flex items-center gap-80 ">
-        <div className="">
-          <div className="">
+      <div className="bg-purple-400 verify-product container px-24 py-24 mx-auto flex items-center gap-80 border-2">
+        <div>
+          <div>
             <img className="w-50" src={product.img} alt="" />
           </div>
           <h1 className="text-danger font-bold">Name:{product.name}</h1>

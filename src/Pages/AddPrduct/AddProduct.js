@@ -9,7 +9,7 @@ const AddProduct = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = data => {
     console.log(data)
-    axios.post('http://localhost:5000/productSymaOfficial', data)
+    axios.post('https://pure-springs-49512.herokuapp.com/productSymaOfficial', data)
       .then(res => {
         if (res.data.insertedId) {
           alert('Successfully Added')
@@ -20,8 +20,8 @@ const AddProduct = () => {
   }
   return (
     <div>
-      <div class="container mx-auto px-4">
-        <img className='lg:w-60 mx-auto' src="https://i.ibb.co/k0q0xcs/image.png" alt="" />
+      <div className="container mx-auto px-4">
+        <img className='lg:w-60 mx-auto' src="https://i.ibb.co/GPtkH7h/image.png" alt="" />
         <div className='add-product pb-16 text-black '>
           <h2 className='font-bold text-5xl my-5 underline'>Add Product</h2>
           <form onSubmit={handleSubmit(onSubmit)} className='text-2xl  text-center mb-28'>

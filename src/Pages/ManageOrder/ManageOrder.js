@@ -9,13 +9,13 @@ const ManageOrder = () => {
   };
   console.log(status);
   useEffect(() => {
-    fetch("http://localhost:5000/allOrders")
+    fetch("https://pure-springs-49512.herokuapp.com/allOrders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
 
   const handeleUpdate = (id) => {
-    fetch(`http://localhost:5000/status/${id}`, {
+    fetch(`https://pure-springs-49512.herokuapp.com/status/${id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ status }),
@@ -27,7 +27,7 @@ const ManageOrder = () => {
     <div>
       <div className="container mx-auto px-4">
         <h1 className="text-2xl border-2 font-bold bg-purple-50">All orders {orders.length}</h1>
-        <table class="table-auto border-2 bg-purple-50">
+        <table className="table-auto border-2 bg-purple-50">
           <thead className="border-2">
             <tr>
               <th className="border-2">#</th>

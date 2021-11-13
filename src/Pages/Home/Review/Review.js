@@ -6,7 +6,7 @@ const Review = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = data => {
     console.log(data)
-    axios.post('http://localhost:5000/addReview', data)
+    axios.post('https://pure-springs-49512.herokuapp.com/addReview', data)
       .then(res => {
         if (res.data.insertedId) {
           alert('Thank you! for Review')
@@ -16,9 +16,9 @@ const Review = () => {
       })
   };
   return (
-    <div class="container mx-auto px-4">
+    <div className="container mx-auto px-4">
 
-      <div class='review-product pb-16 text-yellow-400'>
+      <div className='review-product pb-16 text-yellow-400'>
         <h2 className='font-bold text-5xl my-5 underline'>Review</h2>
         <form onSubmit={handleSubmit(onSubmit)} className=' text-2xl  text-center mb-28'>
           <input {...register("name", { required: true, maxLength: 20 })} placeholder='Name' className='text-left border-2' />

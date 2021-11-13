@@ -5,14 +5,14 @@ import Headar from '../Shared/Headar/Headar';
 const Explore = () => {
   const [prodacts, setProdacts] = useState([])
   useEffect(() => {
-    fetch('http://localhost:5000/products')
+    fetch('https://pure-springs-49512.herokuapp.com/products')
       .then(res => res.json())
       .then(data => setProdacts(data));
   }, [])
   return (
     <>
       <Headar></Headar>
-      <div class="container mx-auto px-4">
+      <div className="container mx-auto px-4">
 
         {
           prodacts.map(prodact => <Prodacts

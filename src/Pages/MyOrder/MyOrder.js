@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Headar from '../Shared/Headar/Headar';
 
 const MyOrder = () => {
   const email = sessionStorage.getItem('email');
@@ -7,13 +8,13 @@ const MyOrder = () => {
   const [control, setControl] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myOrders/${email}`)
+    fetch(`https://pure-springs-49512.herokuapp.com/myOrders/${email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [control]);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/deleteOrder/${id}`, {
+    fetch(`https://pure-springs-49512.herokuapp.com/deleteOrder/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -27,8 +28,8 @@ const MyOrder = () => {
 
   return (
     <div>
-      <h1 className="text-2xl">Order Details</h1>
-
+      <Headar></Headar>
+      <h1 className="text-2xl font-bold text-yellow-800 my-5 ">Order Details</h1>
       <div className="">
         <div className="container mx-auto px-4">
           {orders.map((product) => (
@@ -54,7 +55,6 @@ const MyOrder = () => {
           ))}
         </div>
       </div>
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
     </div>
 
   );

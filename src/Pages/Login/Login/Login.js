@@ -34,9 +34,9 @@ const Login = () => {
             <div className="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
               <h2 className="text-gray-900 text-lg font-medium title-font mb-5">LOGIN</h2>
               <form onSubmit={handleLoginSubmit}>
-                <label for="email" className="leading-7 text-sm text-gray-600 font-bold ">Email</label>
+                <label htmlFor="email" className="leading-7 text-sm text-gray-600 font-bold ">Email</label>
                 <input onChange={handleOnChange} type="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
-                <label for="password" className="leading-7 text-sm text-gray-600 font-bold ">Password</label>
+                <label htmlFor="password" className="leading-7 text-sm text-gray-600 font-bold ">Password</label>
                 <input onChange={handleOnChange} type="password" name="password" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                 {user?.email && <p className="success font-bold ">Login successfully!</p>}
                 {authError && <p className="error">{authError}</p>}
