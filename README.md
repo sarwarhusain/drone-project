@@ -2,9 +2,9 @@
 live server:https://final-project-p-hero.web.app
 
 ##
-This website is fully drone related
+This website is fully drone related.
 ###
-You can buy Any Product
+You can buy Any Product after login.if your are not loin you don't buy product.
 ### `payment problem`
 We are Sorry Our Website gonna Update,So we don't Provide You for payment
 ####
